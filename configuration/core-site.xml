@@ -1,0 +1,6 @@
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>${HDFS_MASTER_URI}</value>
+  </property>
+</configuration>

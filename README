@@ -1,0 +1,22 @@
+Dane testowe znajdują się w katalogu test.
+Make file był testowany jedynie na arch linux.
+
+W makefile trzeba ustawić:
+- JAVA_DIRECTORY           - katalog domowy javy
+- HDFS_MASTER_HOST         - host hdfs mastera
+- HDFS_SLAVES              - oddzielone spacjami nazwy hostów datanodes
+- SPARK_MASTER_HOST        - host spark mastera
+- SPARK_SLAVES             - oddzielone spacjami nazwy hostów spark slaves
+- INPUT_DIRECTORY          - katalog z plikami w których ma być wykryte podobieństwo (domyślnie pliki z test)
+- SHINGLE_SIZE             - długość podsłów
+- SIGNATURE_SIZE           - wielkość wektorów sygnatur
+- NUMBER_OF_BOUNDS         - ilość części sygnatur, na które zostaną podzielone sygnatury w celu kubełkowania
+
+Na końcu działania programu wypisywane są hipotetyczne pary, wraz z policzonym podobieństwem Jaccarda ich shingli.
+
+make run:
+- ściąga, rozpakowuje, konfiguruje i uruchamia hdfs
+- ściąga, rozpakowuje, konfiguruje i uruchamia spark
+- kompiluje i uruchamia projekt
+
+W razie problemów make clean i ponownie make run.
